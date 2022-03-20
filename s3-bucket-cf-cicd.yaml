@@ -1,0 +1,10 @@
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: param-bucket-cf-cp
+Outputs:
+  S3BucketName:
+    Value: !GetAtt
+      - S3Bucket
+    Description: "Name of the S3 bucket Cretated"
